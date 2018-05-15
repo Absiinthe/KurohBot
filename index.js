@@ -36,7 +36,13 @@ bot.on('guildMemberRemove', member => {
         var result = string.replace(/^!say\s/i, " ");
         message.channel.sendMessage(result)
         console.log("Say you !")
-          }
+        }
+          console.log("BOT : [ON]");
+    bot.user.setActivity("se reveille");
+    }
+bot.on("message", message => {
+    if (message.content.toLowerCase() === "bonjour")
+		message.channel.send("Bonjour !");
         });
 
 bot.login("process.env.TOKEN");
