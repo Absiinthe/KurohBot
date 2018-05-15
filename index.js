@@ -2,8 +2,6 @@ const Discord = require ('discord.js');
 const bot = new Discord.Client();
 const prefix = "/";
 
-bot.login("process.env.TOKEN");
-
 
 bot.on('ready', () => {
     bot.user.setPresence({ game: { name: "Kuroh Bot", type: 0 } });
@@ -40,3 +38,5 @@ bot.on('guildMemberRemove', member => {
         console.log("Say you !")
           }
         });
+
+bot.login("process.env.TOKEN");
